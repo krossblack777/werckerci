@@ -2,4 +2,10 @@ box: wercker/docker
 
 build:
   step:
-    - echo aaa
+    - script:
+        name: docker build
+        code: docker build -t docker/centos .
+    - script:
+      name: run container
+      code: docker run -t -rm docker/centos
+
