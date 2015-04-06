@@ -1,0 +1,5 @@
+box: wercker/docker
+
+build:
+  step:
+    - echo aaa
